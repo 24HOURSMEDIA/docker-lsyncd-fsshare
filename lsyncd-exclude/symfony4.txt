@@ -1,4 +1,3 @@
 /.git
 /.idea
-/var/cache/*
-/var/log/*
+/var/log/*/*
