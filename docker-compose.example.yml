@@ -10,7 +10,7 @@ services:
       context: .
       dockerfile: ./Dockerfile
     environment:
-      exclude_handle: symfony4g
+      exclude_handle: symfony4
     volumes:
       - .:/mnt/master:delegated
       - replica:/mnt/replica
