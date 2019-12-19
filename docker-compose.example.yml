@@ -1,0 +1,28 @@
+version: '2.3'
+
+
+services:
+  # lsyncd container
+  # mounts the project dir to /mnt/master using a bind mount
+  # then replicas are created in a volume replica
+  lsyncd:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      exclude_handle: symfony4g
+    volumes:
+      - .:/mnt/master:delegated
+      - replica:/mnt/replica
+  # dependent container example
+  # this mounts the replica. it is faster than mounting the project dir directly.
+  # the files are bidirectionally kept in sync
+  mounted:
+    image: alpine:latest
+    entrypoint: ["tail", "-f", "/dev/null"]
+    depends_on:
+      - lsyncd
+    volumes:
+      - replica:/mnt/replica
+volumes:
+  replica: {}
