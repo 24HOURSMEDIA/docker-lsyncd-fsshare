@@ -1,8 +1,8 @@
 #!/bin/sh
 
-exclude_list=/lsyncd-exclude/${exclude_handle}.txt
+exclude_list=/lsyncd-exclude/${EXCLUDE_HANDLE}.txt
 
-if [ -n "$exclude_handle" ]
+if [ -n "$EXCLUDE_HANDLE" ]
 then
   ls -l $exclude_list
   if [ -f "$exclude_list" ]
