@@ -11,6 +11,7 @@ services:
       dockerfile: ./Dockerfile
     environment:
       EXCLUDE_HANDLE: symfony4
+      DELAY: 2
     volumes:
       - .:/mnt/master:delegated
       - replica:/mnt/replica

@@ -16,6 +16,17 @@ then
   fi
 fi
 
+# parse environment variables in lsyncd.conf
+export DELAY=${DELAY:-2}
+export STATUS_INTERVAL=2
+export RSYNC_ARCHIVE=true
+export RSYNC_PERMS=true
+sh /24hoursmedia/utils/env-subst.sh /lsyncd.conf.src /lsyncd.conf
+
+echo "configuration:"
+cat /lsyncd.conf
+
+
 echo "starting lsyncd"
 lsyncd /lsyncd.conf
 

@@ -1,18 +1,18 @@
 settings {
     nodaemon  = true,
     statusFile = "/tmp/lsyncd.stat",
-    statusInterval = 1
+    statusInterval = $STATUS_INTERVAL
 }
 
-sync{
+sync {
     default.rsync,
     source="/mnt/master",
     target="/mnt/replica",
     excludeFrom="/exclude.txt",
-    delay=1,
+    delay=$DELAY,
     rsync={
-        perms=true,
+        archive=$RSYNC_ARCHIVE,
+        perms=$RSYNC_PERMS,
         chmod="777"
     }
-
 }
