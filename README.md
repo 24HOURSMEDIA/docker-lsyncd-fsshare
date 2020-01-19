@@ -20,7 +20,8 @@ https://ss64.com/bash/rsync_options.html.
     DELAY               2       sync delay
     STATUS_INTERVAL     2       status interval update
     RSYNC_ARCHIVE       true    use rsync archive attr
-    RSYNC_PERMS         true    enable rsync perms
+    RSYNC_PERMS         false   enable to rsync perms
+    RSYNC_CHMOD         777     chmods files to 777
 
 ## Excluding files and directories
 

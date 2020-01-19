@@ -13,6 +13,6 @@ sync {
     rsync={
         archive=$RSYNC_ARCHIVE,
         perms=$RSYNC_PERMS,
-        chmod="777"
+        chmod="$RSYNC_CHMOD"
     }
 }

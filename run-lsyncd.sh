@@ -20,7 +20,8 @@ fi
 export DELAY=${DELAY:-2}
 export STATUS_INTERVAL=${STATUS_INTERVAL:-2}
 export RSYNC_ARCHIVE=${RSYNC_ARCHIVE:-true}
-export RSYNC_PERMS=${RSYNC_PERMS:-true}
+export RSYNC_PERMS=${RSYNC_PERMS:-false}
+export RSYNC_CHMOD=${RSYNC_PERMS:-777}
 sh /24hoursmedia/utils/env-subst.sh /lsyncd.conf.src /lsyncd.conf
 
 echo "configuration:"
