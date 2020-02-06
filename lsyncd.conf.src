@@ -1,5 +1,6 @@
 settings {
     nodaemon  = true,
+    insist = true,
     statusFile = "/tmp/lsyncd.stat",
     statusInterval = $STATUS_INTERVAL
 }

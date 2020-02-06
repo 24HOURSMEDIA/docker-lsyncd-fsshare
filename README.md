@@ -1,5 +1,7 @@
 # LSYNCD - FSSHARE
 
+- https://github.com/24HOURSMEDIA/docker-lsyncd-fsshare -
+
 A docker with a master and a replica volume that are kept in sync (1-way).
 
 Use case: resolve OSX slowness by mounting your application to the master,
@@ -22,6 +24,7 @@ https://ss64.com/bash/rsync_options.html.
     RSYNC_ARCHIVE       true    use rsync archive attr
     RSYNC_PERMS         false   enable to rsync perms
     RSYNC_CHMOD         777     chmods files to 777
+    LOG_LEVEL           scarce  log level, scarce (=errors only) or all
 
 ## Excluding files and directories
 
